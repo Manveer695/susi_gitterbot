@@ -118,4 +118,4 @@ req.end();
 // to keep heroku active
 setInterval(function() {
   https.get(process.env.HerokuUrl);
-}, 12000);
+}, 1200000000);
