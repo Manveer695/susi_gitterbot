@@ -2,7 +2,14 @@ var https = require('https');
 var request = require('request');
 var roomId    = process.env.ROOM_ID;
 var token     = process.env.TOKEN;
+var express = require('express');
 var emptyMessage = " \n";
+
+var app = express();
+
+app.get('/', function (req, res) {
+	res.send('Susi says Hello.');
+});
 
 // To bind a port on heroku 
 https.createServer(function (request, response) {
