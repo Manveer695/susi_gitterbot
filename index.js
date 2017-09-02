@@ -18,7 +18,7 @@ var options = {
   headers:  {'Authorization': 'Bearer ' + token}
 };
 
-request('https://susigitterbot.herokuapp.com', function (error, response, body) {
+https.request('https://susigitterbot.herokuapp.com', function (error, response, body) {
   if (!error && response.statusCode == 200) {
     console.log(body);
   }
@@ -117,4 +117,4 @@ req.end();
 // to keep heroku active
 setInterval(function() {
   https.get(process.env.HerokuUrl);
-}, 12000);
+}, 1200);
