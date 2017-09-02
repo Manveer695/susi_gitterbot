@@ -18,6 +18,12 @@ var options = {
   headers:  {'Authorization': 'Bearer ' + token}
 };
 
+request('https://susigitterbot.herokuapp.com', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body);
+  }
+});
+
 // making a request to gitter stream API
 var req = https.request(options, function(res) {
   res.on('data', function(chunk) {
