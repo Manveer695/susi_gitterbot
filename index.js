@@ -1,4 +1,5 @@
-var https = require('http');
+var https = require('https');
+var http = require('http');
 var request = require('request');
 var roomId    = process.env.ROOM_ID;
 var token     = process.env.TOKEN;
@@ -117,5 +118,5 @@ req.end();
 
 // to keep heroku active
 setInterval(function() {
-  https.get(process.env.HerokuUrl);
-}, 1200000000);
+  http.get(process.env.HerokuUrl);
+}, 12000);
